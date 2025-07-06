@@ -2,7 +2,7 @@ requests
 beautifulsoup4
 pandas
 nltk
-spacy
+spacy==3.7.2
 networkx
 sentence-transformers
 streamlit
@@ -10,16 +10,11 @@ python-docx
 pymupdf
 selenium
 langchain
-openai
-selenium
+openai==0.28
 webdriver-manager
 fastapi
 uvicorn
 faiss-cpu
 matplotlib
-openai==0.28
-requests
-beautifulsoup4
 PyPDF2
-spacy==3.7.2
 pyvis
