@@ -1,0 +1,38 @@
+[project]
+name = "isro-helpbot"
+version = "0.1.0"
+description = "ISRO HelpBot for answering queries from a Knowledge Graph built from ISRO data sources"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+requires-python = ">=3.8"
+
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "pandas",
+    "nltk",
+    "spacy==3.7.2",
+    "networkx",
+    "sentence-transformers",
+    "streamlit",
+    "python-docx",
+    "pymupdf",
+    "selenium",
+    "webdriver-manager",
+    "langchain",
+    "openai==0.28",
+    "PyPDF2",
+    "fastapi",
+    "uvicorn",
+    "faiss-cpu",
+    "matplotlib",
+    "pyvis"
+]
+
+[project.scripts]
+isro-helpbot = "isro_helpbot.cli:main"
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"

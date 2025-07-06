@@ -1,0 +1,62 @@
+[
+    {
+        "query": "What is INSAT-3D used for?",
+        "expected": "info_query",
+        "predicted": "info_query",
+        "correct": true
+    },
+    {
+        "query": "Download the latest ocean report",
+        "expected": "download",
+        "predicted": "download",
+        "correct": true
+    },
+    {
+        "query": "Where is SCATSAT located?",
+        "expected": "location_query",
+        "predicted": "location_query",
+        "correct": true
+    },
+    {
+        "query": "I want rainfall data for India",
+        "expected": "data_request",
+        "predicted": "data_request",
+        "correct": true
+    },
+    {
+        "query": "Okay, nothing specific",
+        "expected": "fallback",
+        "predicted": "fallback",
+        "correct": true
+    },
+    {
+        "query": "Explain Megha-Tropiques",
+        "expected": "info_query",
+        "predicted": "info_query",
+        "correct": true
+    },
+    {
+        "query": "Fetch satellite imagery for cyclone",
+        "expected": "data_request",
+        "predicted": "data_request",
+        "correct": true
+    },
+    {
+        "query": "Save document for weather data",
+        "expected": "download",
+        "predicted": "download",
+        "correct": true
+    },
+    {
+        "query": "Define INSAT",
+        "expected": "info_query",
+        "predicted": "info_query",
+        "correct": true
+    },
+    {
+        "query": "Which region does INSAT cover?",
+        "expected": "location_query",
+        "predicted": "location_query",
+        "correct": true
+    }
+]

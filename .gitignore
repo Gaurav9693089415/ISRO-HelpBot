@@ -1,0 +1,39 @@
+# Python virtualenv
+venv/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Log files
+*.log
+*.tmp
+
+# IDEs
+.vscode/
+.idea/
+
+# Notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+*.egg-info/
+
+# Package archives
+*.whl
+*.egg
+*.zip
+*.tar.gz
+
+# Secrets
+.env
+apikeys.json
+secrets.json
