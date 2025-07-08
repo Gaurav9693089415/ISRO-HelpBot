@@ -240,25 +240,9 @@ Uploaded files auto-update the Knowledge Graph.
 | Backend          | FastAPI, Uvicorn                               |
 | Others           | LangChain, OpenAI API, Selenium                |
 ```
-## 🎯 Objectives (As per ISRO Hackathon)
 
-* Convert web portal content into machine-readable knowledge.
-* Enable geospatial semantic search.
-* Build a dynamic, AI-based helpbot interface.
-* Provide API for external access to the system.
 
----
 
-## 🏁 Final Outcome
-
-An end-to-end, modular AI HelpBot that:
-
-* Parses ISRO content into a Knowledge Graph.
-* Understands user questions contextually.
-* Answers using accurate and semantically relevant data.
-* Offers CLI + UI + REST API + pip packaging.
-
----
 
 ## 🛡️ License
 
@@ -276,16 +260,7 @@ Special thanks to **ISRO**, **IN-SPACe**, and **AICTE** for organizing the [Bhar
 
 * Voice interaction
 * Image-based QnA using satellite maps
-* Integration with live ISRO data streams
 
 ```
 
----
 
-Let me know if you'd like me to:
-- Add badges (PyPI, License, Build)
-- Generate this as a downloadable file
-- Translate it into Hindi (for local repo presentation)
-
-Ready to proceed with packaging now?
-```
