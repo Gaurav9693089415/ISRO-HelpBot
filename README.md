@@ -1,22 +1,51 @@
  # **🌟 ISRO HelpBot**
 
+# ISRO_HelpBot
+
+An AI-powered conversational assistant designed for information retrieval from ISRO's knowledge resources using a Knowledge Graph, Natural Language Processing (NLP), and semantic search. Built for the [ISRO Bharatiya Antariksh Hackathon 2025](https://www.isrohack.in/), this project aims to revolutionize access to space-related information.
+
+
+## 🎯 Problem Statement (As per Hackathon)
+
+The MOSDAC Portal hosts satellite data, documentation, and FAQs, but users face difficulty navigating its depth and diversity. This project introduces an AI-based HelpBot that addresses this issue by enabling intelligent, contextual, and interactive access to relevant information.
+
+### 🧵 Objectives
+
+- Build a virtual assistant using NLP/ML for intelligent question answering  
+- Extract entities and relationships from structured/unstructured web content  
+- Construct a dynamic knowledge graph for efficient information retrieval  
+- Enable spatial intelligence for queries containing location-based terms  
+- Ensure the system is modular, pip-installable, and deployable on other portals  
+
+### 🎯 Expected Outcomes
+
+- A chatbot capable of instant, contextual answers from MOSDAC content  
+- A semantic knowledge graph modeling ISRO datasets and FAQs  
+- CLI, Streamlit UI, and FastAPI API access  
+- Packaged and deployable solution  
+
+### 📏 Evaluation Parameters
+
+- **Intent Recognition Accuracy**: Correct classification of user intent  
+- **Entity Recognition Accuracy**: Accurate extraction of entities like satellite names, regions, and parameters  
+- **Response Completeness**: Degree to which all relevant information is included in a response  
+- **Response Consistency**: Logical coherence across multiple turns and related queries  
 
 
 
                                                                                      
-An AI-powered conversational assistant designed for information retrieval from ISRO's knowledge resources using a Knowledge Graph, Natural Language Processing (NLP), and semantic search. Built for the [ISRO Bharatiya Antariksh Hackathon 2025](https://www.isrohack.in/), this project aims to revolutionize access to space-related information.
 
 
 
 ## 📌 Features
 
--  **Query Understanding**: Extracts intent and named entities from natural language queries.
--  **Knowledge Graph Builder**: Builds a semantic knowledge graph from `.txt`, `.pdf`, `.docx`, and `.xlsx` documents.
--  **Geospatial Awareness**: Recognizes and links locations (e.g., "Bay of Bengal", "17°N") from queries and documents.
--  **Frontend Chat UI**: Built a modern frontend stack with Tailwind CSS and Vanilla JS for an interactive experience.
--  **Backend API**: FastAPI-powered backend to serve query results via RESTful endpoints.
--  **Evaluation Metrics**: Includes performance measures such as Intent Recognition Accuracy, Entity Recognition Accuracy, Response Consistency, and Response Completeness.
----
+-  **Query Understanding**: Extracts user intent and key entities using NLP and custom classifiers.
+-  **Knowledge Graph Builder**: Dynamically parses structured and unstructured data into a semantic graph.
+-  **Geospatial Intelligence**: Recognizes spatial entities like oceans, coordinates, and regions for spatially aware responses.
+-  **Frontend Chat Interface**: Responsive UI built using **Tailwind CSS** and **Vanilla JS** for a lightweight, fast experience.
+- ⚙️ **FastAPI Backend**: Handles real-time RESTful communication between UI and backend models.
+-  **Evaluation Metrics**: Intent, entity, and answer quality tracked and visualized via automated tools.
+-  **Pip-Installable Package**: Fully modular and installable via `pip install isro-helpbot`.
 
 ## 🗂️ Project Structure
 
@@ -160,19 +189,32 @@ pip install -e .
 isro-helpbot
 ```
 
-This opens the Streamlit interface at `http://localhost:8501/`.
+Runs Locally at  `http://localhost:8501/`.
 
-### 📍 Run Backend API
+### Launch FastAPI Backend
 
 ```bash
-uvicorn backend.main:app --reload --port 8080
+uvicorn api.main_api:app --reload --port 8080
+
 ```
+Runs at http://localhost:8080/
 
 ---
 
-## 📊 Evaluation Metrics
+## 📊 Evaluation Summary
 
+| Metric                  | Score    |
+|-------------------------|----------|
+| ✅ Intent Recognition    | 100.00%  |
+| 🧠 Entity Recognition    | 80.00%   |
+| 📚 Response Completeness| 60.00%   |
+| 🔁 Response Consistency | 100.00%  |
 
+**Evaluation artifacts saved under:**
+
+- `evaluation/results/intent_results.json`  
+- `evaluation/results/false_positives.csv`  
+- `evaluation/results/eval_summary.png` (bar chart)
 
 ---
 
