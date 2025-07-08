@@ -181,7 +181,7 @@ pip install -e .
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ### 📍 Launch Chatbot UI (FastAPI + Tailwind CSS)
 
