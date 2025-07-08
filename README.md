@@ -43,7 +43,7 @@ The MOSDAC Portal hosts satellite data, documentation, and FAQs, but users face 
 -  **Knowledge Graph Builder**: Dynamically parses structured and unstructured data into a semantic graph.
 -  **Geospatial Intelligence**: Recognizes spatial entities like oceans, coordinates, and regions for spatially aware responses.
 -  **Frontend Chat Interface**: Responsive UI built using **Tailwind CSS** and **Vanilla JS** for a lightweight, fast experience.
-- ⚙️ **FastAPI Backend**: Handles real-time RESTful communication between UI and backend models.
+-  **FastAPI Backend**: Handles real-time RESTful communication between UI and backend models.
 -  **Evaluation Metrics**: Intent, entity, and answer quality tracked and visualized via automated tools.
 -  **Pip-Installable Package**: Fully modular and installable via `pip install isro-helpbot`.
 
