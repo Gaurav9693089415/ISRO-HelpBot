@@ -181,23 +181,39 @@ pip install -e .
 
 ---
 
-##  Usage
+## 🚀 Usage
 
-### 📍 Launch Chatbot UI
+### 📍 Launch Chatbot UI (FastAPI + Tailwind CSS)
 
 ```bash
 isro-helpbot
 ```
 
-Runs Locally at  `http://localhost:8501/`.
+Runs locally at: [http://localhost:8080](http://localhost:8080)
 
-### Launch FastAPI Backend
+This is  the **default UI**, served via **FastAPI**, with a modern frontend built using **Tailwind CSS + Vanilla JS**. It interacts with a dynamic knowledge graph to provide intelligent responses.
+
+---
+
+### 📍 Launch Streamlit UI (Optional)
+
+```bash
+isro_helpbot --mode streamlit
+```
+
+Runs locally at: [http://localhost:8501](http://localhost:8501)
+
+This alternative UI uses Streamlit for quick testing or demo purposes.
+
+---
+
+### 🛠️ Manually Launch FastAPI Backend (Advanced Option)
 
 ```bash
 uvicorn api.main_api:app --reload --port 8080
-
 ```
-Runs at http://localhost:8080/
+
+
 
 ---
 
