@@ -205,10 +205,10 @@ Runs at http://localhost:8080/
 
 | Metric                  | Score    |
 |-------------------------|----------|
-| ✅ Intent Recognition    | 100.00%  |
-| 🧠 Entity Recognition    | 80.00%   |
-| 📚 Response Completeness| 60.00%   |
-| 🔁 Response Consistency | 100.00%  |
+|  Intent Recognition    | 100.00%  |
+|  Entity Recognition    | 80.00%   |
+|  Response Completeness| 60.00%   |
+|  Response Consistency | 100.00%  |
 
 **Evaluation artifacts saved under:**
 
@@ -243,7 +243,7 @@ Uploaded files auto-update the Knowledge Graph.
 
 
 
-
+```
 ## 🛡️ License
 
 MIT License. See `LICENSE` file.
