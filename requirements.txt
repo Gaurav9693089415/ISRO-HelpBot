@@ -13,8 +13,12 @@ langchain
 openai==0.28
 webdriver-manager
 fastapi
-uvicorn
+
 faiss-cpu
 matplotlib
 PyPDF2
 pyvis
+matplotlib
+
+uvicorn[standard]
+python-multipart

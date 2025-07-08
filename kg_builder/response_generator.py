@@ -1,17 +1,12 @@
-# kg_builder/response_generator.py
-
 def generate_response(intent, entities):
-    """
-    Dummy response generator for evaluation testing.
-    Replace with real logic later.
-    """
     if intent == "info_query":
-        return f"[Info] {entities}"
+        response = f"[Info] {'; '.join(e[0] for e in entities)}"
     elif intent == "location_query":
-        return f"[Location] {entities}"
+        response = f"[Location] {'; '.join(e[0] for e in entities)}"
     elif intent == "data_request":
-        return f"[Data Access] {entities}"
+        response = f"[Data Access] {'; '.join(e[0] for e in entities)}"
     elif intent == "download":
-        return f"[Download Link] {entities}"
+        response = f"[Download Link] {'; '.join(e[0] for e in entities)}"
     else:
-        return "Sorry, I didn't understand your request."
+        response = "Sorry, I didn't understand your request."
+    return {"answer": response, "entities": entities}

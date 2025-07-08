@@ -21,7 +21,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "isro-helpbot = isro_helpbot.entrypoints:launch_app"
+            "isro_helpbot = isro_helpbot.entrypoints:launch_app"
         ]
     },
     classifiers=[

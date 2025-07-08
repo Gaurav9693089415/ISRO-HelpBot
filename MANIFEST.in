@@ -1,0 +1,28 @@
+# Core documentation
+include README.md
+include LICENSE
+include requirements.txt
+
+# Include frontend UI code
+recursive-include ui *
+
+# Include Knowledge Graph builder components
+recursive-include kg_builder *
+
+# Include other source code (e.g., FastAPI backend)
+recursive-include isro_helpbot *
+
+# Include static files such as images, PDFs, etc.
+recursive-include ui/static *
+recursive-include assets *
+
+# Include language models, NLP data (if any)
+recursive-include models *
+recursive-include data *
+
+# Include any .txt or .csv used for knowledge ingestion
+recursive-include *.txt
+recursive-include *.csv
+
+# Exclude unwanted files
+global-exclude __pycache__ *.py[cod] *.so .DS_Store Thumbs.db

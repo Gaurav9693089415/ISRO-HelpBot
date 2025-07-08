@@ -1,62 +1,218 @@
-[
-    {
-        "query": "What is INSAT-3D used for?",
-        "expected": "info_query",
-        "predicted": "info_query",
-        "correct": true
+{
+    "metrics": {
+        "Intent Recognition Accuracy": 1.0,
+        "Entity Recognition Accuracy": 0.8,
+        "Response Completeness": 0.6,
+        "Response Consistency": 1.0
     },
-    {
-        "query": "Download the latest ocean report",
-        "expected": "download",
-        "predicted": "download",
-        "correct": true
-    },
-    {
-        "query": "Where is SCATSAT located?",
-        "expected": "location_query",
-        "predicted": "location_query",
-        "correct": true
-    },
-    {
-        "query": "I want rainfall data for India",
-        "expected": "data_request",
-        "predicted": "data_request",
-        "correct": true
-    },
-    {
-        "query": "Okay, nothing specific",
-        "expected": "fallback",
-        "predicted": "fallback",
-        "correct": true
-    },
-    {
-        "query": "Explain Megha-Tropiques",
-        "expected": "info_query",
-        "predicted": "info_query",
-        "correct": true
-    },
-    {
-        "query": "Fetch satellite imagery for cyclone",
-        "expected": "data_request",
-        "predicted": "data_request",
-        "correct": true
-    },
-    {
-        "query": "Save document for weather data",
-        "expected": "download",
-        "predicted": "download",
-        "correct": true
-    },
-    {
-        "query": "Define INSAT",
-        "expected": "info_query",
-        "predicted": "info_query",
-        "correct": true
-    },
-    {
-        "query": "Which region does INSAT cover?",
-        "expected": "location_query",
-        "predicted": "location_query",
-        "correct": true
-    }
-]
+    "details": [
+        {
+            "query": "What is INSAT-3D used for?",
+            "expected_intent": "info_query",
+            "predicted_intent": "info_query",
+            "correct_intent": true,
+            "correct_entity": true,
+            "response_complete": true,
+            "response_consistent": true,
+            "response": "[Info] insat",
+            "entities": [
+                [
+                    "insat",
+                    "ISRO_ENTITY"
+                ]
+            ],
+            "response_entities": [
+                [
+                    "insat",
+                    "ISRO_ENTITY"
+                ]
+            ]
+        },
+        {
+            "query": "Download the latest ocean report",
+            "expected_intent": "download",
+            "predicted_intent": "download",
+            "correct_intent": true,
+            "correct_entity": true,
+            "response_complete": false,
+            "response_consistent": true,
+            "response": "[Download Link] ocean report",
+            "entities": [
+                [
+                    "ocean report",
+                    "ISRO_ENTITY"
+                ]
+            ],
+            "response_entities": [
+                [
+                    "ocean report",
+                    "ISRO_ENTITY"
+                ]
+            ]
+        },
+        {
+            "query": "Where is SCATSAT located?",
+            "expected_intent": "location_query",
+            "predicted_intent": "location_query",
+            "correct_intent": true,
+            "correct_entity": true,
+            "response_complete": true,
+            "response_consistent": true,
+            "response": "[Location] scatsat",
+            "entities": [
+                [
+                    "scatsat",
+                    "ISRO_ENTITY"
+                ]
+            ],
+            "response_entities": [
+                [
+                    "scatsat",
+                    "ISRO_ENTITY"
+                ]
+            ]
+        },
+        {
+            "query": "I want rainfall data for India",
+            "expected_intent": "data_request",
+            "predicted_intent": "data_request",
+            "correct_intent": true,
+            "correct_entity": true,
+            "response_complete": false,
+            "response_consistent": true,
+            "response": "[Data Access] india; rainfall data",
+            "entities": [
+                [
+                    "india",
+                    "GPE"
+                ],
+                [
+                    "rainfall data",
+                    "ISRO_ENTITY"
+                ]
+            ],
+            "response_entities": [
+                [
+                    "india",
+                    "GPE"
+                ],
+                [
+                    "rainfall data",
+                    "ISRO_ENTITY"
+                ]
+            ]
+        },
+        {
+            "query": "Okay, nothing specific",
+            "expected_intent": "fallback",
+            "predicted_intent": "fallback",
+            "correct_intent": true,
+            "correct_entity": false,
+            "response_complete": true,
+            "response_consistent": true,
+            "response": "Sorry, I didn't understand your request.",
+            "entities": [],
+            "response_entities": []
+        },
+        {
+            "query": "Explain Megha-Tropiques",
+            "expected_intent": "info_query",
+            "predicted_intent": "info_query",
+            "correct_intent": true,
+            "correct_entity": false,
+            "response_complete": true,
+            "response_consistent": true,
+            "response": "[Info] ",
+            "entities": [],
+            "response_entities": []
+        },
+        {
+            "query": "Fetch satellite imagery for cyclone",
+            "expected_intent": "data_request",
+            "predicted_intent": "data_request",
+            "correct_intent": true,
+            "correct_entity": true,
+            "response_complete": false,
+            "response_consistent": true,
+            "response": "[Data Access] satellite imagery",
+            "entities": [
+                [
+                    "satellite imagery",
+                    "ISRO_ENTITY"
+                ]
+            ],
+            "response_entities": [
+                [
+                    "satellite imagery",
+                    "ISRO_ENTITY"
+                ]
+            ]
+        },
+        {
+            "query": "Save document for weather data",
+            "expected_intent": "download",
+            "predicted_intent": "download",
+            "correct_intent": true,
+            "correct_entity": true,
+            "response_complete": false,
+            "response_consistent": true,
+            "response": "[Download Link] weather data",
+            "entities": [
+                [
+                    "weather data",
+                    "ISRO_ENTITY"
+                ]
+            ],
+            "response_entities": [
+                [
+                    "weather data",
+                    "ISRO_ENTITY"
+                ]
+            ]
+        },
+        {
+            "query": "Define INSAT",
+            "expected_intent": "info_query",
+            "predicted_intent": "info_query",
+            "correct_intent": true,
+            "correct_entity": true,
+            "response_complete": true,
+            "response_consistent": true,
+            "response": "[Info] insat",
+            "entities": [
+                [
+                    "insat",
+                    "ISRO_ENTITY"
+                ]
+            ],
+            "response_entities": [
+                [
+                    "insat",
+                    "ISRO_ENTITY"
+                ]
+            ]
+        },
+        {
+            "query": "Which region does INSAT cover?",
+            "expected_intent": "location_query",
+            "predicted_intent": "location_query",
+            "correct_intent": true,
+            "correct_entity": true,
+            "response_complete": true,
+            "response_consistent": true,
+            "response": "[Location] insat",
+            "entities": [
+                [
+                    "insat",
+                    "ISRO_ENTITY"
+                ]
+            ],
+            "response_entities": [
+                [
+                    "insat",
+                    "ISRO_ENTITY"
+                ]
+            ]
+        }
+    ]
+}
