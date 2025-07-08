@@ -10,13 +10,12 @@ An AI-powered conversational assistant designed for information retrieval from I
 
 ## 📌 Features
 
-- 🔎 **Query Understanding**: Extracts intent and named entities from natural language queries.
-- 🧠 **Knowledge Graph Builder**: Builds a semantic knowledge graph from `.txt`, `.pdf`, `.docx`, and `.xlsx` documents.
-- 🌐 **Geospatial Awareness**: Recognizes and links locations (e.g., "Bay of Bengal", "17°N") from queries and documents.
-- 💬 **Frontend Chat UI**: Built using Streamlit with file upload and interactive conversation.
-- ⚙️ **Backend API**: FastAPI-powered backend to serve query results via RESTful endpoints.
-- 📈 **Evaluation Metrics**: Real-time performance metrics to assess accuracy and responsiveness.
-
+-  **Query Understanding**: Extracts intent and named entities from natural language queries.
+-  **Knowledge Graph Builder**: Builds a semantic knowledge graph from `.txt`, `.pdf`, `.docx`, and `.xlsx` documents.
+-  **Geospatial Awareness**: Recognizes and links locations (e.g., "Bay of Bengal", "17°N") from queries and documents.
+-  **Frontend Chat UI**: Built a modern frontend stack with Tailwind CSS and Vanilla JS for an interactive experience.
+-  **Backend API**: FastAPI-powered backend to serve query results via RESTful endpoints.
+-  **Evaluation Metrics**: Includes performance measures such as Intent Recognition Accuracy, Entity Recognition Accuracy, Response Consistency, and Response Completeness.
 ---
 
 ## 🗂️ Project Structure
@@ -132,9 +131,8 @@ ISRO HELPBOT/
 └── setup.py                           # Package installer configuration
 ```
 
-Let me know if you want this as a downloadable `.md` or `.txt` file or integrated into your `README.md`.
 
-````
+`
 
 ---
 
@@ -154,7 +152,7 @@ pip install -e .
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ### 📍 Launch Chatbot UI
 
@@ -174,7 +172,7 @@ uvicorn backend.main:app --reload --port 8080
 
 ## 📊 Evaluation Metrics
 
-Evaluation metrics like accuracy, precision, recall, and response latency are automatically logged and can be viewed in the Streamlit sidebar.
+
 
 ---
 
@@ -191,16 +189,15 @@ Uploaded files auto-update the Knowledge Graph.
 
 ## 💻 Technologies Used
 
-| Category    | Tools/Tech Stack                  |
-| ----------- | --------------------------------- |
-| NLP         | spaCy, NLTK, SentenceTransformers |
-| KG + Search | NetworkX, FAISS, PyVis            |
-| UI          | Streamlit                         |
-| Backend     | FastAPI, Uvicorn                  |
-| Others      | LangChain, OpenAI API, Selenium   |
-
----
-
+| Category         | Tools / Frameworks                             |
+|------------------|------------------------------------------------|
+| NLP/ML           | spaCy, NLTK, SentenceTransformers, Sklearn     |
+| Vector Search    | FAISS, Transformers, PyTorch                   |
+| Knowledge Graph  | NetworkX, PyVis                                |
+| Frontend         | Tailwind CSS, Vanilla JS                       |
+| Backend          | FastAPI, Uvicorn                               |
+| Others           | LangChain, OpenAI API, Selenium                |
+```
 ## 🎯 Objectives (As per ISRO Hackathon)
 
 * Convert web portal content into machine-readable knowledge.
