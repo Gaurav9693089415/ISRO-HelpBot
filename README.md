@@ -24,28 +24,116 @@ An AI-powered conversational assistant designed for information retrieval from I
 
 ```
 
-ISRO\_HelpBot/
-├── isro\_helpbot/             # Core Python package
-│   ├── **init**.py
-│   ├── cli.py                # CLI entrypoint
-│   ├── main.py
-│   └── kg\_builder/           # Knowledge graph components
-│       ├── entity\_extractor.py
-│       ├── relationship\_mapper.py
-│       └── text\_preprocessor.py
-├── ui/                       # Streamlit frontend
-│   ├── streamlit\_app.py
-│   └── static/
-│       └── moon\_bg.png
-├── backend/                  # FastAPI backend
-│   ├── main.py
-│   └── routes/
-├── tests/
-├── .env                      # Environment variables (excluded from Git)
-├── requirements.txt
-├── pyproject.toml            # For pip packaging
-├── README.md
-└── LICENSE
+
+
+```
+ISRO HELPBOT/
+├── __pycache__/                       # Compiled Python bytecode
+├── .vscode/                           # VS Code settings for development
+│   └── settings.json                  # Editor preferences and configurations
+│
+├── api/                               # FastAPI backend for handling API requests
+│   ├── __pycache__/
+│   ├── data/                          # API-level data files (temporary or static)
+│   ├── static/                        # Static assets for FastAPI (CSS, JS, etc.)
+│   ├── __init__.py                    # Marks directory as a Python package
+│   ├── main_api.py                    # Uvicorn entrypoint with FastAPI app instance
+│   ├── query_handler.py               # Logic to handle and respond to queries via API
+│   └── routes.py                      # API endpoint definitions and routing
+│
+├── app/                               # Supplementary app scripts
+│   ├── __pycache__/
+│   └── main.py                        # Optional script for centralized app execution
+│
+├── core/                              # Chat logic and shared application functionality
+│   ├── __pycache__/
+│   └── chat_engine.py                 # Core engine handling conversations and message flow
+│
+├── data/                              # Datasets and documents used in KG construction
+│   ├── clean_text/                    # Cleaned versions of raw text documents
+│   ├── graph/                         # Serialized Knowledge Graphs
+│   │   └── knowledge_graph.pkl        # Pickled NetworkX graph
+│   ├── html/                          # Raw HTML files from scraped pages
+│   ├── mosdac_docs/                   # Original documents (pdf/docx) from MOSDAC
+│   ├── mosdac_pages/                  # Full saved MOSDAC HTML pages
+│   └── raw_docs/                      # Raw document input before cleaning
+│
+├── raw_text/                          # Preprocessed plain text documents
+│   ├── raw_docs                       # Raw text files for reference
+│   └── test.text                      # Sample text used for testing
+│
+├── evaluation/                        # Evaluation scripts and outputs
+│   ├── eval_engine.py                 # Script for evaluating intent/entity/response performance
+│   └── results/                       # Output metrics and evaluation results
+│       ├── intent_results.json        # JSON containing evaluation result details
+│       ├── false_positives.csv        # Queries where intent classification failed
+│       └── eval_summary.png           # Bar chart visualization of evaluation metrics
+│
+├── ingestion/                         # Document parsing and scraping modules
+│   ├── docx_extractor.py              # Parse and extract text from .docx
+│   ├── dynamic_scraper.py             # Scrape JavaScript-rendered MOSDAC pages
+│   ├── html_scraper.py                # Parse static HTML files
+│   └── pdf_extractor.py               # Extract content from PDFs
+│
+├── intent_classifier/                # Intent classification model and routing
+│   ├── __pycache__/
+│   ├── __init__.py                    # Package initializer
+│   ├── intent_predictor.py            # ML model that predicts user intent
+│   └── intent_router.py               # Maps intent labels to downstream task handlers
+│
+├── isro_helpbot/                      # Core pip-installable CLI module
+│   ├── __pycache__/
+│   ├── __init__.py                    # Package initializer
+│   └── cli.py                         # CLI script to launch the bot via terminal
+│
+├── kg_builder/                        # Knowledge Graph construction modules
+│   ├── entity_extractor.py            # Extracts named entities from documents/queries
+│   ├── relationship_mapper.py         # Detects relationships among entities
+│   ├── response_generator.py          # Forms responses from entities and graph traversal
+│   └── text_preprocessor.py           # Cleans, splits and processes raw text
+│
+├── lib/                               # External shared libraries (if any)
+│
+├── model/                             # Models and vector storage
+│   ├── __pycache__/
+│   ├── embedding_generator.py         # Generates embeddings from textual input
+│   ├── faiss_store_docs.pkl           # Serialized FAISS-compatible document store
+│   ├── faiss_store.index              # FAISS binary index for fast semantic retrieval
+│   ├── kg_reasoner.py                 # Reasoning logic using KG + LLM
+│   ├── language_model.py              # Wrapper for local or API-based language models
+│   ├── qa_pipeline.py                 # Complete pipeline from query to answer
+│   └── vector_store.py                # Vector DB abstraction for FAISS, Chroma, etc.
+│
+├── tests/                             # Unit and integration test scripts
+│   ├── test_intent_classifier.py      # Tests for intent classification logic
+│   ├── test_kg.py                     # Tests for KG extraction and structure
+│   └── test_scrapper.py               # Tests for scraping functions
+│
+├── ui/                                # Streamlit-based frontend
+│   ├── __pycache__/
+│   ├── components/                    # Streamlit component scripts (widgets, etc.)
+│   ├── static/                        # Static images, graphs, etc.
+│   ├── templates/                     # HTML templates (optional for hybrid UI)
+│   ├── index.html                     # Frontend base page
+│   ├── __init__.py                    # Marks UI as a package
+│   └── streamlit_app.py               # Streamlit chatbot UI interface
+│
+├── venv/                              # Python virtual environment (excluded from Git)
+├── .env                               # API keys and environment variables
+├── .gitignore                         # Exclude rules for Git
+├── build_index.py                     # Builds FAISS index for semantic search
+├── config.py                          # Centralized configuration file (e.g., paths, thresholds)
+├── entrypoints.py                     # Unified entrypoints for CLI/API/Streamlit
+├── LICENSE                            # License file (MIT in this case)
+├── main.py                            # Optional main runner script
+├── MANIFEST.in                        # Include non-Python files during packaging
+├── mosdac_crawler.py                  # Crawler script to fetch data from MOSDAC
+├── pyproject.toml                     # Modern Python packaging metadata
+├── requirements.txt                   # Required dependencies for pip install
+└── setup.py                           # Package installer configuration
+```
+
+Let me know if you want this as a downloadable `.md` or `.txt` file or integrated into your `README.md`.
 
 ````
 
