@@ -1,9 +1,8 @@
-Here's a professional, clean, and complete `README.md` for your **ISRO HelpBot** project, optimized for both GitHub and PyPI packaging:
 
----
+
 
 ```markdown
-# 🚀 ISRO HelpBot
+## 🚀 ISRO HelpBot
 
 An AI-powered conversational assistant designed for information retrieval from ISRO's knowledge resources using a Knowledge Graph, Natural Language Processing (NLP), and semantic search. Built for the [ISRO Bharatiya Antariksh Hackathon 2025](https://www.isrohack.in/), this project aims to revolutionize access to space-related information.
 
